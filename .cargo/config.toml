@@ -1,0 +1,6 @@
+[build]
+target = "x86_64-unknown-none.json" # Build for a no-os target,
+
+[unstable]
+build-std = ["core", "compiler_builtins"] # Build core and it's dependency compiler_builtins from src
+build-std-features = ["compiler-builtins-mem"] # Build memset, etc. from compiler_builtins crate

@@ -1,4 +1,0 @@
-{
-  "llvm-target": "aarch64-unknown-none",
-  "data-layout": "e-m:e-i64:"
-}
