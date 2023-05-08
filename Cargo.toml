@@ -8,3 +8,5 @@ bootloader = "0.9.23"
 volatile = "0.3.0"
 lazy_static = {version = "1.4.0", features = ["spin_no_std"]}
 spin = "0.9.8"
+x86_64 = "0.14.10"
+uart_16550 = "0.2.18"

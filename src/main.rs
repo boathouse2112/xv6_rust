@@ -1,19 +1,18 @@
 #![no_main]
 #![no_std]
 
-mod vga_buffer;
 mod uart;
 mod x86;
+mod proc;
 
 use core::panic::PanicInfo;
-use crate::uart::SerialPort;
+use crate::uart::{SERIAL_PORT};
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
-    // println!("no way never{}", "!");
-    // panic!("It broke");
 
-    let a = SerialPort::init();
+    lazy_static::initialize(&uart::SERIAL_PORT);
+    println!("Hello, UART!");
 
     loop {}
 }
