@@ -4,6 +4,7 @@
 
 // See:
 // https://github.com/rust-osdev/x86_64/blob/22066fa1a1d6efb43ca8bb64db30c208322c32c5/testing/src/serial.rs#L4
+// https://os.phil-opp.com/testing/#printing-to-the-console
 
 use core::arch::asm;
 use core::fmt;
@@ -12,7 +13,6 @@ use core::ops::BitAnd;
 use lazy_static::lazy_static;
 use spin::Mutex;
 use uart_16550::SerialPort;
-use crate::x86;
 
 const SERIAL_PORT_ADDRESS: u16 = 0x3f8;
 const DATA: u16 = SERIAL_PORT_ADDRESS;

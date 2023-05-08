@@ -2,7 +2,6 @@
 #![no_std]
 
 mod uart;
-mod x86;
 mod proc;
 
 use core::panic::PanicInfo;
