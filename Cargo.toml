@@ -1,15 +1,23 @@
 [package]
-name = "xv6_x86_64_rs"
+name = "xv6_rust"
 version = "0.1.0"
 edition = "2021"
 
-[dependencies]
-bootloader = "0.9.23"
-volatile = "0.3.0"
-lazy_static = {version = "1.4.0", features = ["spin_no_std"]}
-spin = "0.9.8"
-x86_64 = "0.14.10"
-uart_16550 = "0.2.18"
+[[bin]]
+name = "gdt"
+path = "gdt/main.rs"
 
-[package.metadata.bootimage]
-run-command = ["qemu-system-x86_64", "-nographic", "-drive", "format=raw,file={}"]
+[[bin]]
+name = "bootloader"
+path = "bootloader/main.rs"
+
+[dependencies]
+# bootloader = "0.9.23"
+# volatile = "0.3.0"
+# lazy_static = {version = "1.4.0", features = ["spin_no_std"]}
+# spin = "0.9.8"
+# x86_64 = "0.14.10"
+# uart_16550 = "0.2.18"
+
+# [package.metadata.bootimage]
+# run-command = ["qemu-system-x86_64", "-nographic", "-drive", "format=raw,file={}"]
