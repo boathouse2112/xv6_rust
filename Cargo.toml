@@ -12,6 +12,7 @@ name = "bootloader"
 path = "bootloader/main.rs"
 
 [dependencies]
+bitflags = "2.4.0"
 # bootloader = "0.9.23"
 # volatile = "0.3.0"
 # lazy_static = {version = "1.4.0", features = ["spin_no_std"]}
